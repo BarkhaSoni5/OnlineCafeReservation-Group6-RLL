@@ -1,0 +1,65 @@
+DATABASE SQL SCHEMA
+-------------------------
+
+create database mycafe;
+
+use mycafe;
+
+Table: users_model
+Columns:
+id bigint AI PK 
+email_id varchar(255) 
+first_name varchar(255) 
+last_name varchar(255) 
+password varchar(255) 
+phn_no varchar(255)
+
+SELECT * FROM mycafe.users_model;
+
+
+
+Table: admin_users
+Columns:
+id bigint AI PK 
+email varchar(255) 
+password varchar(255)
+
+SELECT * FROM mycafe.admin_users;
+
+
+
+Table: contact_message
+Columns:
+id bigint PK 
+email varchar(255) 
+message varchar(255) 
+name varchar(255)
+
+SELECT * FROM mycafe.contact_message;
+
+
+Table: item_model
+Columns:
+id int PK 
+itemdesc varchar(255) 
+itemname varchar(255) 
+itemprice varchar(255) 
+status varchar(255)
+
+SELECT * FROM mycafe.item_model;
+
+
+Table: user
+Columns:
+id bigint AI PK 
+date varchar(255) 
+email varchar(255) 
+msg varchar(255) 
+name varchar(255) 
+no varchar(255) 
+phone varchar(255) 
+status varchar(255) 
+table_column varchar(255) 
+time varchar(255)
+
+SELECT * FROM mycafe.user;
