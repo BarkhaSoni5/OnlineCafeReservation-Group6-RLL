@@ -4,6 +4,16 @@ DATABASE SQL SCHEMA
 create database mycafe;
 
 use mycafe;
+---------------------------------------------------------------------------------
+CREATE TABLE `users_model` (
+   `id` bigint NOT NULL AUTO_INCREMENT,
+   `email_id` varchar(255) DEFAULT NULL,
+   `first_name` varchar(255) DEFAULT NULL,
+   `last_name` varchar(255) DEFAULT NULL,
+   `password` varchar(255) DEFAULT NULL,
+   `phn_no` varchar(255) DEFAULT NULL,
+   PRIMARY KEY (`id`)
+ ) 
 
 Table: users_model
 Columns:
@@ -16,7 +26,13 @@ phn_no varchar(255)
 
 SELECT * FROM mycafe.users_model;
 
-
+---------------------------------------------------
+CREATE TABLE `admin_users` (
+   `id` bigint NOT NULL AUTO_INCREMENT,
+   `email` varchar(255) DEFAULT NULL,
+   `password` varchar(255) DEFAULT NULL,
+   PRIMARY KEY (`id`)
+ ) 
 
 Table: admin_users
 Columns:
@@ -26,7 +42,15 @@ password varchar(255)
 
 SELECT * FROM mycafe.admin_users;
 
+---------------------------------------------------------
 
+CREATE TABLE `contact_message` (
+   `id` bigint NOT NULL,
+   `email` varchar(255) DEFAULT NULL,
+   `message` varchar(255) DEFAULT NULL,
+   `name` varchar(255) DEFAULT NULL,
+   PRIMARY KEY (`id`)
+ ) 
 
 Table: contact_message
 Columns:
@@ -37,6 +61,15 @@ name varchar(255)
 
 SELECT * FROM mycafe.contact_message;
 
+------------------------------------------------------------------------
+CREATE TABLE `item_model` (
+   `id` int NOT NULL,
+   `itemdesc` varchar(255) DEFAULT NULL,
+   `itemname` varchar(255) DEFAULT NULL,
+   `itemprice` varchar(255) DEFAULT NULL,
+   `status` varchar(255) DEFAULT NULL,
+   PRIMARY KEY (`id`)
+ ) 
 
 Table: item_model
 Columns:
@@ -47,7 +80,20 @@ itemprice varchar(255)
 status varchar(255)
 
 SELECT * FROM mycafe.item_model;
-
+----------------------------------------------------------------------------------------
+CREATE TABLE `user` (
+   `id` bigint NOT NULL AUTO_INCREMENT,
+   `date` varchar(255) DEFAULT NULL,
+   `email` varchar(255) DEFAULT NULL,
+   `msg` varchar(255) DEFAULT NULL,
+   `name` varchar(255) DEFAULT NULL,
+   `no` varchar(255) DEFAULT NULL,
+   `phone` varchar(255) DEFAULT NULL,
+   `status` varchar(255) DEFAULT NULL,
+   `table_column` varchar(255) DEFAULT NULL,
+   `time` varchar(255) DEFAULT NULL,
+   PRIMARY KEY (`id`)
+ )
 
 Table: user
 Columns:
